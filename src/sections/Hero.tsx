@@ -3,7 +3,7 @@ import {Button} from "../components/Button.tsx";
 const Hero = () => {
     return (
         <section className="relative min-h-screen mt-32">
-            <div className="container mx-auto 6">
+            <div className="container mx-auto">
                 <div className="flex flex-col items-center justify-center gap-10">
                     <h1 className="text-5xl font-bold text-center leading-20">
                         Balancing <br/>

@@ -7,10 +7,10 @@ export const Button = ({
                            ...props
                        }) => {
     return (
-        <button className="btn-grad">
-      <span className="relative flex items-center justify-center gap-2">
-        {children}
-      </span>
+        <button type="submit" className="btn-grad">
+            <span className="relative flex items-center justify-center gap-2">
+                {children}
+            </span>
         </button>
     );
 };
