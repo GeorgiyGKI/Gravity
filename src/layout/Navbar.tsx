@@ -3,12 +3,7 @@ import { useEffect, useState } from "react";
 // import {Button} from "../components/Button.tsx";
 import { Menu, X } from "lucide-react";
 
-const navLinks = [
-    { href: "#about", label: "ABOUT" },
-    { href: "#market", label: "MARKET" },
-    { href: "#join", label: "JOIN" },
-    { href: "#contactUs", label: "CONTACT US" },
-];
+
 
 export const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,7 +28,6 @@ export const Navbar = () => {
             <nav className="container mx-auto px-6 flex items-center justify-between">
                 <a
                     href="#"
-                    className="text-xl font-bold tracking-tight hover:text-primary"
                 >
                     <img src="/logo.png" alt=""/>
                 </a>
@@ -41,21 +35,37 @@ export const Navbar = () => {
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-1">
                     <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
-                        {navLinks.map((link, index) => (
                             <a
-                                href={link.href}
-                                key={index}
+                                href="#"
                                 className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
                             >
-                                {link.label}
+                                ABOUT US
                             </a>
-                        ))}
+                        <a
+                            href="#"
+                            className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
+                        >
+                            OUR SERVICES
+                        </a>
+                        <a
+                            href="#"
+                            className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
+                        >
+                            WORK WITH US
+                        </a>
+                        <a
+                            href="#"
+                            className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
+                        >
+                           BLOG
+                        </a>
+
                     </div>
                 </div>
-
                 {/* CTA Button */}
-                <div className="hidden md:block">
-                    {/*<Button size="sm">Contact Me</Button>*/}
+                <div className="hidden md:flex items-center gap-3">
+                    <div className="point-grad"/>
+                    <p>GET IN TOUCH</p>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -71,17 +81,30 @@ export const Navbar = () => {
             {isMobileMenuOpen && (
                 <div className="md:hidden glass-strong animate-fade-in">
                     <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-                        {navLinks.map((link, index) => (
-                            <a
-                                href={link.href}
-                                key={index}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-lg text-muted-foreground hover:text-foreground py-2"
-                            >
-                                {link.label}
-                            </a>
-                        ))}
-
+                        <a
+                            href="#"
+                            className="text-lg text-muted-foreground hover:text-foreground py-2"
+                        >
+                            ABOUT US
+                        </a>
+                        <a
+                            href="#"
+                            className="text-lg text-muted-foreground hover:text-foreground py-2"
+                        >
+                            OUR SERVICES
+                        </a>
+                        <a
+                            href="#"
+                            className="text-lg text-muted-foreground hover:text-foreground py-2"
+                        >
+                            WORK WITH US
+                        </a>
+                        <a
+                            href="#"
+                            className="text-lg text-muted-foreground hover:text-foreground py-2"
+                        >
+                            BLOG
+                        </a>
                         {/*<Button onClick={() => setIsMobileMenuOpen(false)}>*/}
                         {/*    Contact Me*/}
                         {/*</Button>*/}
